@@ -1,0 +1,77 @@
+!-- Início Slider rotativo -- >
+  <div class="slideshow-container"> 
+
+  <div class="mySlides1 fade"> 
+    <img src="imagem1.jpg" style="width:100%"> 
+    <div class="text"><a href="link-imagem-1" alt="Imagem 1"></a></div> 
+  </div>
+  
+  <div class="mySlides1 fade"> 
+    <img src="imagem2.jpg" style="width:100%"> 
+    <div class="text"><a href="link-imagem-2" alt="Imagem 2"></a></div> 
+  </div> 
+   
+</div> 
+!-- Fim Slider rotativo -- >
+
+
+
+!-- Início CSS -- >
+<style> 
+
+  .image-container { 
+
+    display: flex; /* Define o contêiner como flexível */ 
+
+    justify-content: space-between; /* Distribui as imagens igualmente ao longo do contêiner */ 
+
+  } 
+  
+  .image-container img { 
+
+    width: 33%; /* Define a largura das imagens para ocupar 33% do contêiner */ 
+
+    max-width: 100%; /* Garante que as imagens não excedam a largura do contêiner */ 
+
+  } 
+
+</style> 
+!-- Fim CSS -- >
+
+
+!-- Início JavaScript -- >
+
+<script> 
+  var slideIndex = 0; 
+
+  showSlides(); 
+
+  function plusSlides(n) { 
+
+    showSlides(slideIndex += n); 
+
+  } 
+  
+  function showSlides() { 
+    
+    var i; 
+
+    var slides = document.getElementsByClassName("mySlides1"); 
+
+    for (i = 0; i < slides.length; i++) { 
+
+      slides[i].style.display = "none"; 
+    } 
+
+    slideIndex++; 
+
+    if (slideIndex > slides.length) {slideIndex = 1} 
+
+    slides[slideIndex-1].style.display = "block";   
+
+    setTimeout(showSlides, 9000); // Altere aqui para controlar o tempo de transição dos slides (em milissegundos) 
+
+  } 
+</script> 
+
+ !-- Fim JavaScript -- >
