@@ -1,0 +1,50 @@
+  !-- Início grid rotativo -- >
+  <div class="grid-container">
+  <div class="grid-item">
+    <img src="imagem1.jpg" alt="Imagem 1">
+    <p>Texto 1</p>
+  </div>
+  <div class="grid-item">
+    <img src="imagem2.jpg" alt="Imagem 2">
+    <p>Texto 2</p>
+  </div>
+  <div class="grid-item">
+    <img src="imagem3.jpg" alt="Imagem 3">
+    <p>Texto 3</p>
+  </div>
+</div>
+!-- Fim grid rotativo -- >
+  
+  
+!-- Início CSS<style>
+ <style>
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+
+  .grid-item {
+    text-align: center;
+  }
+
+  .grid-item img {
+    width: 100%;
+    height: auto;
+  }
+
+  /* Estilos para telas menores */
+  @media (max-width: 768px) {
+    .grid-container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  /* Estilos para telas ainda menores */
+  @media (max-width: 480px) {
+    .grid-container {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+!-- Fim CSS<style>
